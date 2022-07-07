@@ -59,7 +59,7 @@ export default defineComponent({
   setup(props) {
     const lastValue = computed(() => props.value);
     const dynamicColor = computed(() => {
-      return (props.alert && (lastValue.value > 30)) ? props.alertColor : props.color;
+      return (props.alert && (lastValue.value > props.alertThreshold)) ? props.alertColor : props.color;
     });
     const gaugeOptions = ref({
       animation: true,
