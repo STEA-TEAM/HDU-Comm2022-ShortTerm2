@@ -66,7 +66,7 @@ export default defineComponent({
       tooltip: {},
       series: [
         {
-          name: "Humidity",
+          name: props.name,
           type: "gauge",
           data: [{ value: lastValue }],
           center: ["50%", "60%"],
